@@ -11,13 +11,14 @@
       $data = "SELECT * FROM tbl_sinau";
       $result = $con -> query($data);
 
-      echo "<table border = '1'>
-      <tr>
-        <th>Id</th>
-        <th>Nama</th>
-        <th>Umur</th>
-        <th>Jenis kelamin</th>
-      </tr>";
+      echo "<table border = '1'>";
+      echo "<tr>";
+      echo "<th>Id</th>";
+      echo "<th>Nama</th>";
+      echo "<th>Umur</th>";
+      echo "<th>Jenis kelamin</th>";
+      echo "<th>Edit || Delete</th>";
+      echo "</tr>";
 
       if ($result->num_rows > 0) {
         # code...
@@ -28,6 +29,8 @@
           echo "<td>".$row['nama']."</td>";
           echo "<td>".$row['umur']."</td>";
           echo "<td>".$row['jk']."</td>";
+          echo '<td><a href="edit.php?id='.$row['id'].'">Edit</a>||
+              <a href="delete_proses.php?id='.$row['id'].'">Delete</a></td>';
           echo "</tr>";
         }
       } else {

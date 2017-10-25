@@ -1,8 +1,5 @@
 <?php
 
-  print_r($_POST);
-  exit();
-
   if(isset($_POST['Tambah'])){
 
       include 'koneksi.php';
@@ -15,6 +12,7 @@
 
       if($input){
         echo "Tambah data suskses";
+        echo '<a href="index.php">back</a>';
       } else {
         echo "Error: ";
       }

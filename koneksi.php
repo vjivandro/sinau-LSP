@@ -12,6 +12,6 @@
       echo 'Koneksi gagal : ' .mysqli_connect_error();
       exit();
       mysqli_close($mysqli);
-    }
+    } 
 
 ?>
